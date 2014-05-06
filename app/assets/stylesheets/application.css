@@ -1,0 +1,183 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+html {
+	background: lightblue;
+	font-family: "Oxygen";
+}
+
+body {
+	border-radius: 8px;
+	width: calc(95% - 60px);
+	max-width: 700px;
+	padding: 15px 30px 30px;
+	margin: 20px auto;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header {
+	margin-bottom: 40px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ddd;
+	opacity: 0.5;
+	transition: opacity 0.2s;
+}
+
+header:hover {
+	opacity: 1;
+}
+
+header h1 {
+	margin: 0 5px 0 0;
+	display: inline-block;
+	font-size: 16px;
+	color: #444;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+header p {
+	display: inline;
+	font-style: italic;
+	font-size: 10px;
+}
+
+.task {
+	padding: 10px 10px 5px;
+	border-bottom: 1px solid #eee;
+	transition: all 0.2s;
+	position: relative;
+}
+
+.task:last-child {
+	border: 0;
+}
+
+.task:hover {
+	border-color: #ccc;
+}
+
+.task:hover .delete-action {
+	opacity: 1;
+}
+.task .title {
+	font-size: 20px;
+}
+
+.task a {
+	text-decoration: none;
+}
+
+.task .actions a, .task .actions a:visited {
+	color: #000;
+	transition: all 0.2s;
+}
+
+.task .actions a:hover {
+	background: none;
+	opacity: 1;
+}
+
+.task .actions {
+	font-size: 20px;
+
+}
+
+.task .actions, .task .title {
+	display: inline-block;
+}
+
+.task .actions .mark-button {
+
+}
+
+.task .actions .mark-undone {
+
+}
+
+.task .actions .mark-undone a {
+	color: green;
+}
+
+.task .actions .mark-done a {
+	opacity: 0.3;
+}
+
+.task .actions .mark-done a:hover {
+	opacity: 1;
+	color: green;
+}
+
+.task .delete-action {
+	opacity: 0;
+	transition: all 0.4s;
+}
+
+.task .delete-action a {
+	color: red;
+	opacity: 0.5;
+	padding: 0 5px;
+
+}
+
+.task .delete-action a:hover {
+	opacity: 1;
+	background: none;
+}
+
+.task .delete-action a:visited {
+	color: red;
+}
+
+#inline-task-form {
+	margin-top: 20px;
+	padding: 20px 0;
+}
+
+#inline-task-form .form-title input {
+	width: 100%;
+	border: 0;
+	display: block;
+	padding: 5px 0;
+	border-bottom: 1px solid #aaa;
+	font-size: 24px;
+}
+#inline-task-form .form-content textarea {
+	margin: 5px 0;
+	width: 100%;
+	min-height: 50px;
+	font-size: 16px;
+	border: 0;
+}
+
+#inline-task-form .submit {
+	text-align: center;
+}
+#inline-task-form .submit input {
+	font-size: 16px;
+	border: 0;
+	background: #eee;
+	padding: 8px 10px;
+	border-radius: 3px;
+	color: #444;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+	border: 1px solid #ddd;
+}
+
+#inline-task-form .submit input:hover {
+	background: #888;
+	color: #fff;
+	border-color: #888;
+}

@@ -1,0 +1,18 @@
+<div id="inline-task-form">
+<h2>Nueva Tarea</h2>
+
+<%= form_for(@task) do |f| %>
+
+    <div class="form-title">
+      <%= f.text_field :title, placeholder: "Título" %>
+    </div>
+
+    <div class="form-content">
+    <%= f.text_area :content, placeholder: "Detalles"  %>
+    </div>
+
+  <div class="submit">
+    <%= f.submit "Agregar Tarea"%>
+  </div>
+<% end %>
+</div>
