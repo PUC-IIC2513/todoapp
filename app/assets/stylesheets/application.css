@@ -53,6 +53,14 @@ header p {
 	font-size: 10px;
 }
 
+.center-notice {
+	text-align: center;
+	font-size: 16px;
+	font-style: italic;
+	color: #aaa;
+
+}
+
 .task {
 	padding: 10px 10px 5px;
 	border-bottom: 1px solid #eee;

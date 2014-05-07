@@ -1,8 +1,12 @@
 <div class="task_list">
-<h2>Tareas</h2>
-	
-	<% tasks.each do |task| %>
-		<%= render task %>
+	<h2>Tareas</h2>
+	<% if tasks.empty? %>
+
+		<p class="center-notice">No hay tareas, agrega una nueva ↓ </p>
+	<% else %>
+		<% tasks.each do |task| %>
+			<%= render task %>
+		<% end %>
 	<% end %>
 	
 </div>
