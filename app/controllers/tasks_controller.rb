@@ -114,7 +114,6 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy
-    @id_borrar = @task.id
     @task.destroy
 
     respond_to do |format|
