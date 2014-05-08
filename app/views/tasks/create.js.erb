@@ -1,0 +1,4 @@
+$("<%= escape_javascript render @task %>").css("opacity", 0).appendTo('.task-list').animate({
+	opacity: 1});
+$("#inline-task-form form")[0].reset();
+$("#inline-task-form .submit input").attr('disabled', 'disabled');

@@ -32,13 +32,19 @@ class TasksController < ApplicationController
 
   def mark_done
     if @task.mark_done
-      redirect_to tasks_path
+      respond_to do |format|
+        format.html {redirect_to tasks_path}
+        format.js
+      end
     end
   end
 
   def mark_undone
     if @task.mark_undone
-      redirect_to tasks_path
+      respond_to do |format|
+        format.html {redirect_to tasks_path}
+        format.js
+      end
     end
   end
 
@@ -49,11 +55,13 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
+    redirect_to tasks_path
     @task = Task.new
   end
 
   # GET /tasks/1/edit
   def edit
+    redirect_to tasks_path
   end
 
   # POST /tasks
@@ -72,6 +80,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.save
         format.html { redirect_to tasks_path, notice: 'Task was successfully created.' }
+        format.js
         format.json { render action: 'show', status: :created, location: @task }
       else
         format.html { render action: 'new' }
@@ -105,9 +114,12 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy
+    @id_borrar = @task.id
     @task.destroy
+
     respond_to do |format|
       format.html { redirect_to tasks_url }
+      format.js
       format.json { head :no_content }
     end
   end

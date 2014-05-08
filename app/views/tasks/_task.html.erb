@@ -6,11 +6,11 @@
 	<div class="actions">
 		<span class="mark-button <%= button_class %>"><%= get_action_link(task) %></span>
 		<span class="delete-action">
-		<%= link_to '×', task, method: :delete %>
+		<%= link_to '×', task, method: :delete, remote: true %>
 	</span>
 	</div>
 
-	<div class="title"><%= link_to task.title, task %></div>
+	<div class="title"><%= task.title %></div>
 
 
 	

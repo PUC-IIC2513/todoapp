@@ -184,6 +184,11 @@ header p {
 	border: 1px solid #ddd;
 }
 
+#inline-task-form .submit input:disabled {
+	opacity: 0.2;
+	cursor: default;
+}
+
 #inline-task-form .submit input:hover {
 	background: #888;
 	color: #fff;

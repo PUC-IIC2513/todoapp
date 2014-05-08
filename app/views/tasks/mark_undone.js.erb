@@ -1,0 +1,1 @@
+$("#<%= @task.id %> .actions .mark-button").removeClass('mark-undone').addClass('mark-done').html("<%= escape_javascript get_action_link(@task) %>");
