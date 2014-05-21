@@ -28,7 +28,7 @@ class TasksControllerTest < ActionController::TestCase
 
   test "should show task" do
     get :show, id: @task
-    assert_response :success
+    assert_response :redirect
   end
 
   # test "should get edit" do
