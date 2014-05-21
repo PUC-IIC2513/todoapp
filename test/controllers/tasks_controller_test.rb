@@ -1,4 +1,6 @@
 require 'test_helper'
+require "application_helper"
+
 
 class TasksControllerTest < ActionController::TestCase
   setup do
@@ -11,17 +13,17 @@ class TasksControllerTest < ActionController::TestCase
     assert_not_nil assigns(:tasks)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
+  # test "should get new" do
+  #   get :new
+  #   assert_response :success
+  # end
 
   test "should create task" do
     assert_difference('Task.count') do
       post :create, task: { completed: @task.completed, content: @task.content, title: @task.title }
     end
 
-    assert_redirected_to task_path(assigns(:task))
+    assert_redirected_to tasks_path
   end
 
   test "should show task" do
@@ -29,10 +31,10 @@ class TasksControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, id: @task
-    assert_response :success
-  end
+  # test "should get edit" do
+  #   get :edit, id: @task
+  #   assert_response :success
+  # end
 
   test "should update task" do
     patch :update, id: @task, task: { completed: @task.completed, content: @task.content, title: @task.title }

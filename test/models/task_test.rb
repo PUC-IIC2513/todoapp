@@ -19,12 +19,12 @@ class TaskTest < ActiveSupport::TestCase
 
   test "task one from fixture should be done" do 
     task = tasks(:one)
-    assert task.done? 
+    assert task.done?
   end
   
   test "task two from fixture should not be done" do 
     task = tasks(:two)
-    assert_not task.done? 
+    assert_not task.done?
   end
   
   test "task n=1 from fixture should not be done - mark it done" do 

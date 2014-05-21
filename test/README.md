@@ -9,3 +9,4 @@
 5.- Test every (relevant) method in the model
 5.- Add some validation to the model - watch the tests fail
 
+6.- Move to the controller tests
