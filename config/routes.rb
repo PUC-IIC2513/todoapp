@@ -15,6 +15,9 @@ Todoapp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#index'
 
+
+  post "sessions/register", to: "sessions#register", as: :register
+  get "sessions/register", to: "sessions#register", as: :get_register
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
