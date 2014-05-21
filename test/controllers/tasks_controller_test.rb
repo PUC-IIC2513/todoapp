@@ -49,6 +49,12 @@ class TasksControllerTest < ActionController::TestCase
     assert_redirected_to tasks_path
   end
 
+  # this test should in a static controller test 
+  test "should have the apps title on the index page" do 
+    app_title = "Todoapp"
+    get :index
+    assert_select "title", {count: 1, text: app_title}, "Wrong title or more than one title element"
+  end
 
   test "if task exists - its title should be on the page" do
     task = tasks(:task_6)
@@ -77,4 +83,5 @@ class TasksControllerTest < ActionController::TestCase
       assert_not contained
     end
   end
+
 end
