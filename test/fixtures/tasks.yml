@@ -1,11 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  content: MyText
+  title: Read the tasks.yml fixtures file
+  content: It does contain by default the attributes of the model!
   completed: 2014-05-05
 
 two:
-  title: MyString
-  content: MyText
-  completed: 2014-05-05
+  title: Modify this set
+  content: Write something on this file
+
+<% 7.times do |n| %>
+task_<%= n %>:
+  title: <%= "task_title_#{n}" %>
+  content: <%= "random_content #{n%3}" %>
+  <% if n%2 == 0 %>
+  completed: 2014-05-7
+  <% end %>
+<% end %>

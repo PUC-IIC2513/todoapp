@@ -1,5 +1,7 @@
 class Task < ActiveRecord::Base
 
+	validates_presence_of :title
+
 	def done?
 		self.completed != nil
 	end
